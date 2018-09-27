@@ -15,6 +15,12 @@ public class Datei extends File
     displayName = getName();
   }
 
+  public Datei(String pathname, String name)
+  {
+    super(pathname);
+    displayName = name;
+  }
+
   @Override
   public String toString()
   {

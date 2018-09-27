@@ -3,8 +3,6 @@ package GUI;
 import beans.Datei;
 import beans.DateiModell;
 import beans.FileListRenderer;
-import java.io.File;
-import javax.swing.JOptionPane;
 
 /**
  *

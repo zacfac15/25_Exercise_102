@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 
 public class DateiModell extends AbstractListModel
 {
+
   private LinkedList<Datei> list = new LinkedList<>();
   private Datei punkte;
 
@@ -35,12 +36,12 @@ public class DateiModell extends AbstractListModel
       JOptionPane.showMessageDialog(null, "The list already contains the Object!");
     }
   }
-  
+
   public void getFileList(Datei datei) throws NullPointerException
   {
     File[] files = datei.listFiles();
     list.clear();
-    list.add(new Datei(datei.getReturnPathName() + File.separator + "aaa", "..."));
+    list.add(new Datei((datei.getReturnPathName() + File.separator + "aaa"), "..."));
 
     for (File file : files)
     {
@@ -52,8 +53,8 @@ public class DateiModell extends AbstractListModel
     this.fireContentsChanged(this, 0, list.size() - 1);
 
   }
-  
-   public Datei getDatei(int index)
+
+  public Datei getDatei(int index)
   {
     return list.get(index);
   }
@@ -72,4 +73,5 @@ public class DateiModell extends AbstractListModel
     String replace = absolutePath.substring(absolutePath.lastIndexOf(File.separator) + 1, absolutePath.length());
     return absolutePath.replace(replace, "");
   }
+
 }
