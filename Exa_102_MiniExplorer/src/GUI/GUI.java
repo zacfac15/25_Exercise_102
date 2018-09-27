@@ -37,22 +37,8 @@ public class GUI extends javax.swing.JFrame
   private void initComponents()
   {
 
-    jMenu1 = new javax.swing.JMenu();
-    jMenuItem1 = new javax.swing.JMenuItem();
     jScrollPane1 = new javax.swing.JScrollPane();
     list = new javax.swing.JList<>();
-
-    jMenu1.setText("jMenu1");
-
-    jMenuItem1.setText("delete");
-    jMenuItem1.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        onDel(evt);
-      }
-    });
-    jMenu1.add(jMenuItem1);
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     getContentPane().setLayout(new java.awt.GridLayout(1, 0));
@@ -103,16 +89,6 @@ public class GUI extends javax.swing.JFrame
       }
     }//GEN-LAST:event_onChangeDir
 
-  private void onDel(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onDel
-  {//GEN-HEADEREND:event_onDel
-    Dialog di = new Dialog(this,true);
-    if(di.getOk() && di.isPasswordOk())
-    {
-      list.getSelectedValue().delete();
-    }
-      
-  }//GEN-LAST:event_onDel
-
   public static void main(String args[])
   {
 
@@ -126,8 +102,6 @@ public class GUI extends javax.swing.JFrame
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JMenu jMenu1;
-  private javax.swing.JMenuItem jMenuItem1;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JList<Datei> list;
   // End of variables declaration//GEN-END:variables
