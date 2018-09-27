@@ -4,16 +4,9 @@ import beans.Datei;
 import beans.DateiModell;
 import beans.FileListRenderer;
 
-/**
- *
- * @author Lukas
- */
 public class GUI extends javax.swing.JFrame
 {
 
-  /**
-   * Creates new form GUI
-   */
   private final DateiModell model = new DateiModell();
   private static String PATH_NAME = System.getProperty("user.dir");
 
@@ -42,7 +35,7 @@ public class GUI extends javax.swing.JFrame
     getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
     list.setFont(new java.awt.Font("Courier New", 0, 11)); // NOI18N
-    list.setComponentPopupMenu(jMenu1.getPopupMenu());
+    list.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
     list.addMouseListener(new java.awt.event.MouseAdapter()
     {
       public void mouseClicked(java.awt.event.MouseEvent evt)
